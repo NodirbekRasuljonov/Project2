@@ -33,5 +33,14 @@ namespace Project2
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void AddDonnor_Load(object sender, EventArgs e)
+        {
+            label9.Text=DateTime.Now.ToString();
+        }
     }
 }
