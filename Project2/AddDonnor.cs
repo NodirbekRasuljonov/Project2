@@ -23,5 +23,15 @@ namespace Project2
             main.Show();
             this.Hide();
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
