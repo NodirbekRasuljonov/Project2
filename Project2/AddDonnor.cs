@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project2
 {
@@ -14,6 +15,7 @@ namespace Project2
     {
         public AddDonnor()
         {
+
             InitializeComponent();
         }
 
@@ -26,7 +28,11 @@ namespace Project2
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            TextWriter txt = new StreamWriter("D:\\C# lesson Univeristy\\Project2\\demo.txt");
 
+            txt.Write(nameTextbox.Text);
+            txt.WriteLine(surnameTextBox.Text);
+            DialogResult r = MessageBox.Show("Donnor Added","Save File");
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -41,6 +47,7 @@ namespace Project2
         private void AddDonnor_Load(object sender, EventArgs e)
         {
             label9.Text=DateTime.Now.ToString();
+
         }
     }
 }
