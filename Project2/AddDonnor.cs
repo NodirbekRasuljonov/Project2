@@ -32,6 +32,7 @@ namespace Project2
         {
            DonorInfoClass donorInfo = new DonorInfoClass(name:nameTextbox.Text,surname:surnameTextBox.Text,socialID:socialIdTextBox.Text,phoneNumber:phoneNumberTextBox.Text,email:emailTextBox.Text,date:label9.Text);
             donorInfo.writeToFile();
+            clearTextBoxes();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -41,15 +42,38 @@ namespace Project2
 
         private void label9_Click(object sender, EventArgs e)
         {
+
         }
 
         private void AddDonnor_Load(object sender, EventArgs e)
         {
-            label9.Text=DateTime.Now.ToString();
+            updateDateTime();
 
         }
+
+        //Clear TextBoxes
+        public void clearTextBoxes() {
+            nameTextbox.Clear();
+            surnameTextBox.Clear();
+            socialIdTextBox.Clear();
+            phoneNumberTextBox.Clear();
+            emailTextBox.Clear();
+            bloodTypeTextBox.Clear();
+            updateDateTime();
+        }
+
+
+        //Update Date Time
+        public void updateDateTime()
+        {
+            label9.Text =  DateTime.Now.ToString();
+        }
+
     }
 
+
+
+    //Donnor 
     public class DonorInfoClass
     {
         string name { get; set; }
@@ -71,6 +95,7 @@ namespace Project2
 
         public void  writeToFile()
         {
+
             TextWriter txt = new StreamWriter("D:\\C# lesson Univeristy\\Project2\\demo.txt",true);
             Random rand = new Random();
             int uniqueID = rand.Next(10000, 99999);
@@ -79,9 +104,8 @@ namespace Project2
                 
             txt.Close();
             DialogResult r = MessageBox.Show("Donnor Added", "Save File");
-        }
-
-        
+           
+        }  
     }
 
 }
