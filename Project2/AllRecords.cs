@@ -12,6 +12,9 @@ namespace Project2
 {
     public partial class AllRecords : Form
     {
+
+        int index = 0;
+        int lines = File.ReadLines("D:\\C# lesson Univeristy\\Project2\\demo.txt").Count();
         public AllRecords()
         {
             InitializeComponent();
@@ -23,5 +26,57 @@ namespace Project2
             main.Show();
             this.Hide();
         }
+
+        private void AllRecords_Load(object sender, EventArgs e)
+        {
+            getData(index);
+
+
+        }
+
+        private void records_Click(object sender, EventArgs e)
+        {
+
+        }
+       
+        
+
+        private void prevButton_Click(object sender, EventArgs e)
+        {
+                index--;
+                getData(index);
+           
+           
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            
+                index++;
+                getData(index);
+            
+        }
+        //Getting lines from a file
+        public void getData(int index)
+        {
+            var logFile = File.ReadAllLines("D:\\C# lesson Univeristy\\Project2\\demo.txt");
+            var logList = new List<string>(logFile);
+            int lines=logList.Count;
+            if (index<=0) {
+                records.Text = logList[0];
+
+            }
+            else if(index>=lines) {
+                records.Text = logList[lines-1];
+            }
+            else
+            {
+                records.Text = logList[index];
+
+            }
+
+        }
     }
 }
+
+
