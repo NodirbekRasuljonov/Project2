@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography;
 
 namespace Project2
 {
@@ -28,11 +30,8 @@ namespace Project2
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            TextWriter txt = new StreamWriter("D:\\C# lesson Univeristy\\Project2\\demo.txt");
-
-            txt.Write(nameTextbox.Text);
-            txt.WriteLine(surnameTextBox.Text);
-            DialogResult r = MessageBox.Show("Donnor Added","Save File");
+           DonorInfoClass donorInfo = new DonorInfoClass(name:nameTextbox.Text,surname:surnameTextBox.Text,socialID:socialIdTextBox.Text,phoneNumber:phoneNumberTextBox.Text,email:emailTextBox.Text,date:label9.Text);
+            donorInfo.writeToFile();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -50,4 +49,39 @@ namespace Project2
 
         }
     }
+
+    public class DonorInfoClass
+    {
+        string name { get; set; }
+        string surname { get; set; }
+        string socialID { get; set; }
+        string phoneNumber { get; set; }
+        string email { get; set; }
+        string date { get; set; }
+        public DonorInfoClass(string name, string surname, string socialID, string phoneNumber, string email,string date)
+        {
+            this.name = name;
+            this.surname = surname;
+            this.socialID = socialID;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+            this.date = date;
+        }
+
+
+        public void  writeToFile()
+        {
+            TextWriter txt = new StreamWriter("D:\\C# lesson Univeristy\\Project2\\demo.txt",true);
+            Random rand = new Random();
+            int uniqueID = rand.Next(10000, 99999);
+
+            txt.WriteLine($"ID:{uniqueID},Name:{name},Surname:{surname},SocialID:{socialID},Phone Number:{phoneNumber},Email:{email}, Donation Date {date}");
+                
+            txt.Close();
+            DialogResult r = MessageBox.Show("Donnor Added", "Save File");
+        }
+
+        
+    }
+
 }

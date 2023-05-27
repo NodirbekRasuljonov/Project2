@@ -1,0 +1,6 @@
+ID 02022 ,Name Nodirbek ,Surname Rasuljonov,SocialID Fa5936213
+ID 09261 ,Name Nodirbek,Surname Rasuljono,SocialID 324234
+ID -00745 ,Name Asadek,Surname Rasuljono,SocialID djkshf
+ID -04277,Name Nodirbek,Surname Rasuljonov,SocialID FA5936213,Donation Date 5/27/2023 11:38:20 AM
+ID 93315,Name Keldi ,Surname Bahor,SocialID Ishqa fasli bu,Donation Date 5/27/2023 11:40:31 AM
+ID 30041,Name gekaasd,Surname asdasdas,SocialID Ishqa fasli bu,Donation Date 5/27/2023 11:40:31 AM
