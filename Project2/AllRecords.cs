@@ -12,9 +12,12 @@ namespace Project2
 {
     public partial class AllRecords : Form
     {
-
+        //some local variable using multiple places
         int index = 0;
         int lines = File.ReadLines("D:\\C# lesson Univeristy\\Project2\\demo.txt").Count();
+        string filePath = "D:\\C# lesson Univeristy\\Project2\\demo.txt";
+        
+
         public AllRecords()
         {
             InitializeComponent();
@@ -40,39 +43,106 @@ namespace Project2
         }
        
         
-
+        //decreasing the index of a line in file
         private void prevButton_Click(object sender, EventArgs e)
         {
+            
                 index--;
                 getData(index);
+           
+                
            
            
         }
 
+
+        //incresing the index of line in file
         private void nextButton_Click(object sender, EventArgs e)
         {
             
                 index++;
                 getData(index);
+           
             
         }
+
+        
         //Getting lines from a file
         public void getData(int index)
         {
-            var logFile = File.ReadAllLines("D:\\C# lesson Univeristy\\Project2\\demo.txt");
+            var logFile = File.ReadAllLines(filePath);
             var logList = new List<string>(logFile);
             int lines=logList.Count;
-            if (index<=0) {
-                records.Text = logList[0];
+            FileInfo fileInfo = new FileInfo(filePath);
 
+            if (fileInfo.Exists && fileInfo.Length == 0){
+                records.Text = "No donnors";
+            } 
+            else 
+            {
+                if (index <= 0)
+                {
+                    records.Text = logList[0];
+
+                }
+                else if (index >= lines)
+                {
+                    records.Text = logList[lines - 1];
+                }
+                else
+                {
+                    records.Text = logList[index];
+
+                }
             }
-            else if(index>=lines) {
-                records.Text = logList[lines-1];
+            
+            
+
+        }
+
+
+
+
+        //Deleting a donnor if file is empty it will return warning massage
+        private void deleteButton_Click(object sender, EventArgs e)
+
+        {
+
+            var logFile = File.ReadAllLines(filePath);
+            var logList = new List<string>(logFile);
+            List<string> modifiedLines = new List<string>(logFile);
+            FileInfo fileInfo = new FileInfo(filePath);
+            if (fileInfo.Exists && fileInfo.Length == 0)
+            {
+                DialogResult r = MessageBox.Show("No Donors to Delete", "Warning");
+
             }
             else
             {
-                records.Text = logList[index];
+                if (index <= 0)
+                {
+                    modifiedLines.RemoveAt(0);
+                    File.WriteAllLines(filePath, modifiedLines);
+                    getData(index);
 
+                }
+                else if (index >= lines)
+                {
+                    modifiedLines.RemoveAt(lines - 1);
+                    File.WriteAllLines(filePath, modifiedLines);
+
+                    getData(index);
+
+                }
+                else
+                {
+                    modifiedLines.RemoveAt(index);
+                    File.WriteAllLines(filePath, modifiedLines);
+
+                    getData(index);
+
+
+                }
             }
 
         }

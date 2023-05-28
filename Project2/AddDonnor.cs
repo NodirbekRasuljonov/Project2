@@ -28,6 +28,8 @@ namespace Project2
             this.Hide();
         }
 
+
+        //save button
         private void saveButton_Click(object sender, EventArgs e)
         {
            DonorInfoClass donorInfo = new DonorInfoClass(name:nameTextbox.Text,surname:surnameTextBox.Text,socialID:socialIdTextBox.Text,phoneNumber:phoneNumberTextBox.Text,email:emailTextBox.Text,date:label9.Text);
@@ -73,7 +75,7 @@ namespace Project2
 
 
 
-    //Donnor 
+    //Donnor  class
     public class DonorInfoClass
     {
         string name { get; set; }
@@ -82,6 +84,9 @@ namespace Project2
         string phoneNumber { get; set; }
         string email { get; set; }
         string date { get; set; }
+
+
+       
         public DonorInfoClass(string name, string surname, string socialID, string phoneNumber, string email,string date)
         {
             this.name = name;
@@ -92,7 +97,7 @@ namespace Project2
             this.date = date;
         }
 
-
+        //writing a data into a file
         public void  writeToFile()
         {
 

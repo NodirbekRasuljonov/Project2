@@ -17,6 +17,8 @@ namespace Project2
             InitializeComponent();
         }
 
+
+        //button to navigate adding donnor page
         private void addDonnerButton_Click(object sender, EventArgs e)
         {
             AddDonnor addDonnor= new AddDonnor();
@@ -29,16 +31,22 @@ namespace Project2
 
         }
 
+
+
+        //button to exit an app
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //button to navigate all donnor page
         private void allRecordsButton_Click(object sender, EventArgs e)
         {
             AllRecords allRecords= new AllRecords();
             allRecords.Show();
             this.Hide();
         }
+
+        
     }
 }
