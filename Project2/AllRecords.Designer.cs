@@ -36,6 +36,13 @@
             this.prevButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,23 +72,32 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.records);
             this.panel1.Controls.Add(this.nextButton);
             this.panel1.Controls.Add(this.prevButton);
             this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel1.Location = new System.Drawing.Point(12, 83);
             this.panel1.Name = "panel1";
+            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel1.Size = new System.Drawing.Size(595, 316);
             this.panel1.TabIndex = 3;
             // 
             // records
             // 
             this.records.AutoSize = true;
-            this.records.Location = new System.Drawing.Point(22, 90);
+            this.records.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.records.Location = new System.Drawing.Point(22, 69);
             this.records.Name = "records";
-            this.records.Size = new System.Drawing.Size(46, 15);
+            this.records.Size = new System.Drawing.Size(21, 17);
             this.records.TabIndex = 2;
-            this.records.Text = "records";
+            this.records.Text = "ID";
             this.records.Click += new System.EventHandler(this.records_Click);
             // 
             // nextButton
@@ -126,6 +142,76 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Records";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(22, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(22, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Surname";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(21, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Social ID";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(21, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 17);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Phone Number";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(22, 203);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 17);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Email";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(22, 232);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Blood Type";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(21, 260);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 17);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Donation Date";
+            // 
             // AllRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -157,5 +243,12 @@
         private Label label1;
         private Label label2;
         private Label records;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label9;
+        private Label label8;
     }
 }

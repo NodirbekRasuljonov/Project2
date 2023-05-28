@@ -45,8 +45,6 @@ namespace Project2
             AllRecords allRecords= new AllRecords();
             allRecords.Show();
             this.Hide();
-        }
-
-        
+        } 
     }
 }
