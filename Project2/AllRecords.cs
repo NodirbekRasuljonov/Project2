@@ -14,9 +14,10 @@ namespace Project2
     {
         //some local variable using multiple places
         int index = 0;
-        int lines = File.ReadLines(@"D:\C# lesson Univeristy\Project2\allData.txt").Count();
-        string filePath = @"D:\C# lesson Univeristy\Project2\allData.txt";
-
+        //int lines = File.ReadLines(@"D:\C# lesson Univeristy\Project2\allData.txt").Count();
+        //string filePath = @"D:\C# lesson Univeristy\Project2\allData.txt";
+        int lines = File.ReadLines("allData.txt").Count();
+        string filePath = "allData.txt";
 
 
         public AllRecords()

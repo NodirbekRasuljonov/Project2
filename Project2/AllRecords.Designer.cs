@@ -51,7 +51,7 @@
             // backToMainMenu
             // 
             this.backToMainMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.backToMainMenu.Location = new System.Drawing.Point(418, 405);
+            this.backToMainMenu.Location = new System.Drawing.Point(754, 405);
             this.backToMainMenu.Name = "backToMainMenu";
             this.backToMainMenu.Size = new System.Drawing.Size(189, 33);
             this.backToMainMenu.TabIndex = 0;
@@ -89,13 +89,13 @@
             this.panel1.Location = new System.Drawing.Point(12, 83);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel1.Size = new System.Drawing.Size(595, 316);
+            this.panel1.Size = new System.Drawing.Size(953, 316);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project2.Properties.Resources.def;
-            this.pictureBox1.Location = new System.Drawing.Point(322, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(680, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 287);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -187,7 +187,7 @@
             // 
             this.nextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nextButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.nextButton.Location = new System.Drawing.Point(529, 24);
+            this.nextButton.Location = new System.Drawing.Point(887, 24);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(43, 23);
             this.nextButton.TabIndex = 1;
@@ -230,7 +230,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(619, 450);
+            this.ClientSize = new System.Drawing.Size(977, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);

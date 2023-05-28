@@ -103,7 +103,8 @@ namespace Project2
         {
             Random rand = new Random();
             int uniqueID = rand.Next(10000, 99999);
-            string filePath = @"D:\C# lesson Univeristy\Project2\allData.txt";
+            //string filePath = @"D:\C# lesson Univeristy\Project2\allData.txt";
+            string filePath = "allData.txt";
             StreamWriter fileWriter =new StreamWriter(filePath,true);
             fileWriter.WriteLine($"ID:{uniqueID},Name:{name},Surname:{surname},SocialID:{socialID},Phone Number:{phoneNumber},Email:{email}, Donation Date {date}");
             fileWriter.Close();
