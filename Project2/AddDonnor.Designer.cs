@@ -46,7 +46,6 @@
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.bloodTypeTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.addPhotoButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -198,21 +197,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(338, 83);
+            this.pictureBox1.Image = global::Project2.Properties.Resources.def;
+            this.pictureBox1.Location = new System.Drawing.Point(338, 87);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(350, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // addPhotoButton
-            // 
-            this.addPhotoButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addPhotoButton.Location = new System.Drawing.Point(461, 303);
-            this.addPhotoButton.Name = "addPhotoButton";
-            this.addPhotoButton.Size = new System.Drawing.Size(140, 30);
-            this.addPhotoButton.TabIndex = 17;
-            this.addPhotoButton.Text = "Add photo";
-            this.addPhotoButton.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -231,7 +222,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.addPhotoButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bloodTypeTextBox);
             this.Controls.Add(this.emailTextBox);
@@ -278,7 +268,6 @@
         private TextBox emailTextBox;
         private TextBox bloodTypeTextBox;
         private PictureBox pictureBox1;
-        private Button addPhotoButton;
         private Label label9;
     }
 }

@@ -14,9 +14,10 @@ namespace Project2
     {
         //some local variable using multiple places
         int index = 0;
-        int lines = File.ReadLines("D:\\C# lesson Univeristy\\Project2\\allData.txt").Count();
-        string filePath = "D:\\C# lesson Univeristy\\Project2\\allData.txt";
-        
+        int lines = File.ReadLines(@"D:\C# lesson Univeristy\Project2\allData.txt").Count();
+        string filePath = @"D:\C# lesson Univeristy\Project2\allData.txt";
+
+
 
         public AllRecords()
         {
@@ -33,8 +34,6 @@ namespace Project2
         private void AllRecords_Load(object sender, EventArgs e)
         {
             getData(index);
-
-
         }
 
         private void records_Click(object sender, EventArgs e)
@@ -74,6 +73,7 @@ namespace Project2
             var logList = new List<string>(logFile);
             int lines=logList.Count;
             FileInfo fileInfo = new FileInfo(filePath);
+            char[] trims = {':',',' };
 
             if (fileInfo.Exists && fileInfo.Length == 0){
                 records.Text = "No donnors";
@@ -82,16 +82,16 @@ namespace Project2
             {
                 if (index <= 0)
                 {
-                    records.Text = logList[0];
+                    records.Text = logList[0].Trim(trims);
 
                 }
                 else if (index >= lines)
                 {
-                    records.Text = logList[lines - 1];
+                    records.Text = logList[lines - 1].Trim(trims);
                 }
                 else
                 {
-                    records.Text = logList[index];
+                    records.Text = logList[index].Trim(trims);
 
                 }
             }
@@ -125,7 +125,7 @@ namespace Project2
                     File.WriteAllLines(filePath, modifiedLines);
                     getData(index);
 
-                }
+                } 
                 else if (index >= lines)
                 {
                     modifiedLines.RemoveAt(lines - 1);
